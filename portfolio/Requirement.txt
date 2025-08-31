@@ -1,0 +1,55 @@
+Technical Requirement Document (TRD) – Portfolio Web Application 
+
+The application is built using HTML for structure, Tailwind CSS for rapid styling, and JavaScript for interactivity. GSAP (GreenSock Animation Platform) will be used for smooth, high-performance animations.
+The website will be a single-page application (SPA) experience with a smooth, responsive design that works across mobile, tablet, and desktop devices. The content will be hardcoded within the HTML and JavaScript files, as there is no backend or Content Management System (CMS).
+________________________________________
+2. High-Level Architecture
+Frontend:
+•	Structure: HTML5
+•	Styling: Tailwind CSS, with custom CSS for specific needs.
+•	Interactivity & Logic: JavaScript (ES6+)
+•	Animations: GSAP (GreenSock Animation Platform)
+Backend / Database:
+•	None. This is a static frontend-only site. Content is hardcoded.
+Hosting & Infra:
+•	Can be hosted on any static site hosting service like GitHub Pages, Vercel, or Netlify.
+________________________________________
+3. Modules & Features
+3.1 Public Website
+Feature	Description	Notes
+Landing Page	Hero section with name, tagline, and call-to-action (CTA) buttons.	Animated intro (typing effect, fade-in, and staggered element reveals) using GSAP.
+About Me	Bio, skills, experience, and certifications.	Uses smooth scrolling and section-specific animations.
+Projects	Showcase with title, description, tech stack, live/demo links, and images.	Cards will have hover effects and transition animations. Filters and sorting will be handled with JavaScript.
+Services	Freelance offerings with pricing tiers.	Smooth scroll-to-section.
+Experience & Education	Career timeline (interactive).	Timeline elements will animate into view as the user scrolls, driven by GSAP's ScrollTrigger plugin.
+Certifications	Certificate uploads with links.	Clicking a certificate image or link will open the full-size image or PDF.
+Blog	A simple section with links to external blog posts or a brief list of recent articles.	Hardcoded content with no dynamic blog functionality.
+Testimonials	Client feedback displayed in a slider or carousel.	A JavaScript-powered carousel with auto-scroll and manual navigation.
+Resume	A downloadable PDF of the resume.	A simple HTML anchor link to the hosted PDF file.
+Contact	A static contact section with email and social media links.	No contact form functionality. Provides links to an email address and social profiles.
+Footer	Logo, quick links, contact info, social icons, and copyright notice.	Simple HTML structure with Tailwind CSS styling.
+Export to Sheets
+________________________________________
+4. Non-Functional Requirements
+•	Performance: The site must be lightweight and fast-loading, with a focus on optimized images and efficient GSAP animations to achieve a high Lighthouse score.
+•	Responsiveness: The layout must be fluid and adapt gracefully to all screen sizes (mobile, tablet, and desktop) using Tailwind's responsive utilities. The animations should also be responsive and scaled appropriately.
+•	SEO: Basic SEO will be implemented through proper HTML structure, semantic tags, and meta tags. No server-side rendering is available.
+•	Accessibility: Adherence to WCAG 2.1 guidelines, including proper use of alt text for images and ARIA attributes where necessary for interactive elements.
+•	User Experience (UX): The website must offer a smooth, intuitive, and visually appealing experience with well-timed and purposeful animations.
+________________________________________
+5. Tech Stack Summary
+•	HTML: HTML5 for semantic page structure.
+•	CSS: Tailwind CSS for a utility-first approach to styling.
+•	JavaScript: ES6+ for dynamic functionality and user interaction.
+•	Animation Library: GSAP for creating complex, high-performance animations and ScrollTrigger for scroll-based animations.
+________________________________________
+6. High-Level System Design Diagram
+(Conceptual)
+[ User Browser ]
+      |
+[ HTML, CSS, JavaScript ]
+      |
+[ GSAP Animation Layer ]
+      |
+[ Static File Hosting ]
+
