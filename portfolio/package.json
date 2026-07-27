@@ -1,0 +1,45 @@
+{
+  "name": "professional-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website built with HTML5, Tailwind CSS, and JavaScript featuring GSAP animations",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "echo \"No linting configured\" && exit 0"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "html5",
+    "css3",
+    "javascript",
+    "gsap",
+    "tailwind",
+    "responsive",
+    "animation",
+    "frontend"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/portfolio/issues"
+  },
+  "homepage": "https://yourusername.github.io/portfolio",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

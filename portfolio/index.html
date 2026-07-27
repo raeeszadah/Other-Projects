@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio - Software Developer & Full Stack Engineer">
+    <meta name="keywords" content="portfolio, software developer, full stack engineer, web developer, freelancer, frontend, backend, programming">
+    <meta name="author" content="John Doe">
+    <title>Portfolio|tecoritham</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts for code editor -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-md z-50 transition-all duration-300 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                                 <div class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Portfolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                                 <div class="md:hidden">
+                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-indigo-400">
+                         <i class="fas fa-bars text-xl"></i>
+                     </button>
+                 </div>
+            </div>
+        </div>
+        
+                 <!-- Mobile Menu -->
+         <div id="mobile-menu" class="md:hidden bg-gray-900 border-t border-gray-800 transform -translate-y-full transition-transform duration-300">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="#home" class="block nav-link">Home</a>
+                <a href="#about" class="block nav-link">About</a>
+                <a href="#projects" class="block nav-link">Projects</a>
+                <a href="#services" class="block nav-link">Services</a>
+                <a href="#experience" class="block nav-link">Experience</a>
+                <a href="#contact" class="block nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="hero-content text-center lg:text-left">
+                                                         <h1 class="text-5xl md:text-7xl font-bold text-gray-100 mb-6">
+                         <span class="text-indigo-400">Hello, I'm</span><br>
+                         <span class="typing-text">tecoritham</span>
+                     </h1>
+                                         <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto lg:mx-0">
+                         Software Developer & Full Stack Engineer passionate about building scalable applications and solving complex problems with clean, efficient code
+                     </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#projects" class="btn-primary">View My Work</a>
+                        <a href="#contact" class="btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                
+                <!-- Hero Illustration -->
+                <div class="hero-illustration relative">
+                    <div class="relative z-10">
+                                                 <!-- Main illustration container -->
+                         <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                            <!-- Code editor illustration -->
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <div class="flex items-center mb-3">
+                                    <div class="flex space-x-2">
+                                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                    </div>
+                                    <div class="ml-4 text-gray-400 text-sm">portfolio.js</div>
+                                </div>
+                                <div class="space-y-2 text-sm">
+                                    <div class="text-blue-400">const <span class="text-yellow-400">developer</span> = {</div>
+                                    <div class="text-gray-300 ml-4">name: <span class="text-green-400">'John Doe'</span>,</div>
+                                    <div class="text-gray-300 ml-4">role: <span class="text-green-400">'Full Stack Developer'</span>,</div>
+                                    <div class="text-gray-300 ml-4">skills: [<span class="text-green-400">'React'</span>, <span class="text-green-400">'Node.js'</span>, <span class="text-green-400">'Python'</span>],</div>
+                                    <div class="text-gray-300 ml-4">passion: <span class="text-green-400">'Building amazing apps'</span></div>
+                                    <div class="text-blue-400">};</div>
+                                </div>
+                            </div>
+                            
+                                                         <!-- Web elements illustration -->
+                             <div class="grid grid-cols-2 gap-4">
+                                 <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg p-4 text-white text-center shadow-lg">
+                                     <i class="fas fa-code text-2xl mb-2"></i>
+                                     <div class="text-sm font-semibold">Frontend</div>
+                                 </div>
+                                 <div class="bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg p-4 text-white text-center shadow-lg">
+                                     <i class="fas fa-server text-2xl mb-2"></i>
+                                     <div class="text-sm font-semibold">Backend</div>
+                                 </div>
+                                 <div class="bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg p-4 text-white text-center shadow-lg">
+                                     <i class="fas fa-database text-2xl mb-2"></i>
+                                     <div class="text-sm font-semibold">Database</div>
+                                 </div>
+                                 <div class="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg p-4 text-white text-center shadow-lg">
+                                     <i class="fas fa-cloud text-2xl mb-2"></i>
+                                     <div class="text-sm font-semibold">Cloud</div>
+                                 </div>
+                             </div>
+                        </div>
+                        
+                                                 <!-- Floating elements -->
+                         <div class="absolute -top-4 -right-4 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full p-3 shadow-lg">
+                             <i class="fab fa-react text-2xl text-indigo-600"></i>
+                         </div>
+                         <div class="absolute -bottom-4 -left-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full p-3 shadow-lg">
+                             <i class="fab fa-node-js text-2xl text-purple-600"></i>
+                         </div>
+                         <div class="absolute top-1/2 -right-8 bg-gradient-to-br from-pink-100 to-rose-100 rounded-full p-3 shadow-lg">
+                             <i class="fab fa-js text-2xl text-pink-600"></i>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+                         <div class="text-center mb-16">
+                 <h2 class="text-4xl font-bold text-gray-100 mb-4">About Me</h2>
+                 <div class="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+             </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="about-content">
+                                         <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                         I'm a passionate Software Developer with over 3 years of experience building robust applications 
+                         and solving complex technical challenges. I specialize in full-stack development, system architecture, 
+                         and creating efficient, maintainable code that scales with business needs.
+                     </p>
+                     <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                         When I'm not coding, you can find me contributing to open-source projects, writing technical 
+                         blog posts, or exploring emerging technologies like AI/ML, cloud-native development, and DevOps practices.
+                     </p>
+                    
+                                         <div class="grid grid-cols-2 gap-6">
+                         <div class="skill-item">
+                             <div class="flex items-center mb-3">
+                                 <i class="fab fa-js-square text-2xl text-yellow-400 mr-3"></i>
+                                 <h3 class="font-semibold text-gray-100">Languages</h3>
+                             </div>
+                             <p class="text-gray-300">JavaScript, TypeScript, Python, Java, SQL</p>
+                             <div class="flex flex-wrap gap-2 mt-2">
+                                 <i class="fab fa-js text-sm text-yellow-400"></i>
+                                 <i class="fab fa-python text-sm text-blue-500"></i>
+                                 <i class="fab fa-java text-sm text-red-500"></i>
+                             </div>
+                         </div>
+                         <div class="skill-item">
+                             <div class="flex items-center mb-3">
+                                 <i class="fab fa-react text-2xl text-blue-400 mr-3"></i>
+                                 <h3 class="font-semibold text-gray-100">Frontend</h3>
+                             </div>
+                             <p class="text-gray-300">React, Next.js, Angular, Vue.js, Tailwind CSS</p>
+                             <div class="flex flex-wrap gap-2 mt-2">
+                                 <i class="fab fa-react text-sm text-blue-400"></i>
+                                 <i class="fab fa-angular text-sm text-red-500"></i>
+                                 <i class="fab fa-vuejs text-sm text-green-500"></i>
+                             </div>
+                         </div>
+                         <div class="skill-item">
+                             <div class="flex items-center mb-3">
+                                 <i class="fab fa-node-js text-2xl text-green-400 mr-3"></i>
+                                 <h3 class="font-semibold text-gray-100">Backend</h3>
+                             </div>
+                             <p class="text-gray-300">Node.js, Express, Spring Boot, Django, FastAPI</p>
+                             <div class="flex flex-wrap gap-2 mt-2">
+                                 <i class="fab fa-node-js text-sm text-green-400"></i>
+                                 <i class="fab fa-java text-sm text-red-500"></i>
+                                 <i class="fab fa-python text-sm text-blue-500"></i>
+                             </div>
+                         </div>
+                         <div class="skill-item">
+                             <div class="flex items-center mb-3">
+                                 <i class="fas fa-database text-2xl text-purple-400 mr-3"></i>
+                                 <h3 class="font-semibold text-gray-100">Databases</h3>
+                             </div>
+                             <p class="text-gray-300">MongoDB, PostgreSQL, MySQL, Redis, Elasticsearch</p>
+                             <div class="flex flex-wrap gap-2 mt-2">
+                                 <i class="fas fa-database text-sm text-purple-400"></i>
+                                 <i class="fas fa-server text-sm text-blue-500"></i>
+                                 <i class="fas fa-memory text-sm text-green-500"></i>
+                             </div>
+                         </div>
+                         <div class="skill-item">
+                             <div class="flex items-center mb-3">
+                                 <i class="fab fa-docker text-2xl text-blue-500 mr-3"></i>
+                                 <h3 class="font-semibold text-gray-100">DevOps</h3>
+                             </div>
+                             <p class="text-gray-300">Docker, Kubernetes, AWS, CI/CD, Git</p>
+                             <div class="flex flex-wrap gap-2 mt-2">
+                                 <i class="fab fa-docker text-sm text-blue-500"></i>
+                                 <i class="fab fa-aws text-sm text-orange-500"></i>
+                                 <i class="fab fa-github text-sm text-gray-400"></i>
+                             </div>
+                         </div>
+                         <div class="skill-item">
+                             <div class="flex items-center mb-3">
+                                 <i class="fas fa-tools text-2xl text-orange-400 mr-3"></i>
+                                 <h3 class="font-semibold text-gray-100">Tools</h3>
+                             </div>
+                             <p class="text-gray-300">VS Code, IntelliJ, Postman, Jira, Figma</p>
+                             <div class="flex flex-wrap gap-2 mt-2">
+                                 <i class="fas fa-code text-sm text-blue-400"></i>
+                                 <i class="fas fa-bug text-sm text-red-500"></i>
+                                 <i class="fas fa-palette text-sm text-purple-500"></i>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+                
+                                 <div class="about-image">
+                     <div class="relative">
+                         <!-- Professional Photo -->
+                         <div class="w-80 h-80 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
+                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" 
+                                  alt="John Doe - Software Developer" 
+                                  class="w-full h-full object-cover"
+                                  onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0ZjQ2ZTY7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojN2MzYWVkO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNlYzQ4OTk7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2ZyB4PSIxNzUiIHk9IjE1MCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MyLjY3IDAgNC44NCAyLjE3IDQuODQgNC44NCAwIDIuNjctMi4xNyA0Ljg0LTQuODQgNC44NC0yLjY3IDAtNC44NC0yLjE3LTQuODQtNC44NCAwLTIuNjcgMi4xNy00Ljg0IDQuODQtNC44NHptMCAxMmM0LjQyIDAgOC4xNy0yLjE3IDEwLjU5LTUuNzQtLjU5LTMuNTctMy44Ny02LjI2LTcuNTktNi4yNi0zLjcyIDAtNyA2LjY5LTcuNTkgNi4yNiAyLjQyIDMuNTcgNi4xNyA1Ljc0IDEwLjU5IDUuNzR6Ii8+Cjwvc3ZnPgo8L3N2Zz4K'">
+                         </div>
+                         
+                         <!-- Experience Badge -->
+                         <div class="absolute -bottom-4 -right-4 bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700">
+                             <div class="text-center">
+                                 <div class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">3+</div>
+                                 <div class="text-sm text-gray-300">Years Experience</div>
+                             </div>
+                         </div>
+                         
+                         <!-- Tech Stack Floating Icons -->
+                         <div class="absolute -top-6 -left-6 bg-gray-800 p-3 rounded-full shadow-lg border border-gray-700">
+                             <i class="fab fa-react text-2xl text-blue-400"></i>
+                         </div>
+                         <div class="absolute -top-6 -right-6 bg-gray-800 p-3 rounded-full shadow-lg border border-gray-700">
+                             <i class="fab fa-node-js text-2xl text-green-400"></i>
+                         </div>
+                         <div class="absolute -bottom-6 -left-6 bg-gray-800 p-3 rounded-full shadow-lg border border-gray-700">
+                             <i class="fab fa-python text-2xl text-yellow-400"></i>
+                         </div>
+                         <div class="absolute -bottom-6 -right-6 bg-gray-800 p-3 rounded-full shadow-lg border border-gray-700">
+                             <i class="fab fa-aws text-2xl text-orange-400"></i>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 py-8">
+                         <div class="text-center mb-16">
+                 <h2 class="text-4xl font-bold text-gray-100 mb-4">Featured Projects</h2>
+                 <div class="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-8 rounded-full"></div>
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Project cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+                         <div class="text-center mb-16">
+                 <h2 class="text-4xl font-bold text-gray-100 mb-4">Services I Offer</h2>
+                 <div class="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+             </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                                 <div class="service-card">
+                     <div class="relative mb-6">
+                         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80" 
+                              alt="Software Development" 
+                              class="w-full h-48 object-cover rounded-lg shadow-lg"
+                              onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0ZjQ2ZTY7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojN2MzYWVkO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNlYzQ4OTk7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2ZyB4PSIxNzUiIHk9IjEwMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgNTAgNTAiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTI1IDVIMFYwaDI1djV6bTAgMTBIMFYxMGgyNXY1em0wIDEwSDB2NWgyNXYtNXptMCAxMEgwdjVoMjV2LTV6Ii8+CjxwYXRoIGQ9Ik0yNSAwSDV2MjBoMjBWMHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent rounded-lg"></div>
+                         <div class="absolute bottom-4 left-4">
+                             <div class="text-4xl bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                                 <i class="fas fa-code"></i>
+                             </div>
+                         </div>
+                     </div>
+                     <h3 class="text-xl font-semibold mb-4">Software Development</h3>
+                     <p class="text-gray-300 mb-6">
+                         Full-stack application development with modern frameworks and best practices.
+                     </p>
+                     <div class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">$85/hr</div>
+                 </div>
+                 
+                 <div class="service-card">
+                     <div class="relative mb-6">
+                         <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80" 
+                              alt="System Architecture" 
+                              class="w-full h-48 object-cover rounded-lg shadow-lg"
+                              onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM5MzY2ZjY7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZWM0ODk5O3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmYzY4NzE7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2ZyB4PSIxNzUiIHk9IjEwMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgNTAgNTAiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTI1IDVIMFYwaDI1djV6bTAgMTBIMFYxMGgyNXY1em0wIDEwSDB2NWgyNXYtNXptMCAxMEgwdjVoMjV2LTV6Ii8+CjxwYXRoIGQ9Ik0yNSAwSDV2MjBoMjBWMHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent rounded-lg"></div>
+                         <div class="absolute bottom-4 left-4">
+                             <div class="text-4xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                                 <i class="fas fa-server"></i>
+                             </div>
+                         </div>
+                     </div>
+                     <h3 class="text-xl font-semibold mb-4">System Architecture</h3>
+                     <p class="text-gray-300 mb-6">
+                         Scalable system design, microservices architecture, and cloud solutions.
+                     </p>
+                     <div class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">$95/hr</div>
+                 </div>
+                 
+                 <div class="service-card">
+                     <div class="relative mb-6">
+                         <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80" 
+                              alt="DevOps & Automation" 
+                              class="w-full h-48 object-cover rounded-lg shadow-lg"
+                              onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmYzY4NzE7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmM5ODg5O3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmYzY4NzE7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2ZyB4PSIxNzUiIHk9IjEwMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgNTAgNTAiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTI1IDVIMFYwaDI1djV6bTAgMTBIMFYxMGgyNXY1em0wIDEwSDB2NWgyNXYtNXptMCAxMEgwdjVoMjV2LTV6Ii8+CjxwYXRoIGQ9Ik0yNSAwSDV2MjBoMjBWMHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent rounded-lg"></div>
+                         <div class="absolute bottom-4 left-4">
+                             <div class="text-4xl bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
+                                 <i class="fas fa-cogs"></i>
+                             </div>
+                         </div>
+                     </div>
+                     <h3 class="text-xl font-semibold mb-4">DevOps & Automation</h3>
+                     <p class="text-gray-300 mb-6">
+                         CI/CD pipelines, infrastructure automation, and deployment optimization.
+                     </p>
+                     <div class="text-2xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">$90/hr</div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+                         <div class="text-center mb-16">
+                 <h2 class="text-4xl font-bold text-gray-100 mb-4">Experience & Education</h2>
+                 <div class="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+             </div>
+            
+                         <div class="max-w-4xl mx-auto">
+                 <div class="timeline">
+                     <!-- Current Role -->
+                     <div class="timeline-item">
+                         <div class="timeline-content">
+                             <div class="flex items-center justify-between mb-3">
+                                 <h3 class="text-xl font-semibold">Senior Software Engineer</h3>
+                                 <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">Current</span>
+                             </div>
+                             <p class="text-indigo-400 mb-2">
+                                 <i class="fas fa-building mr-2"></i>TechCorp Solutions • 2022 - Present
+                             </p>
+                             <p class="text-gray-300 mb-3">Leading development of enterprise applications using Java Spring Boot and React. Implementing microservices architecture and mentoring junior developers.</p>
+                             <div class="flex flex-wrap gap-2">
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Java</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Spring Boot</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Microservices</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">AWS</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <!-- Previous Role -->
+                     <div class="timeline-item">
+                         <div class="timeline-content">
+                             <h3 class="text-xl font-semibold mb-2">Full Stack Developer</h3>
+                             <p class="text-indigo-400 mb-2">
+                                 <i class="fas fa-code mr-2"></i>Digital Innovations • 2021 - 2022
+                             </p>
+                             <p class="text-gray-300 mb-3">Developed scalable web applications using Node.js, React, and MongoDB. Implemented CI/CD pipelines and automated testing strategies.</p>
+                             <div class="flex flex-wrap gap-2">
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Node.js</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">MongoDB</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">CI/CD</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Docker</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <!-- Internship -->
+                     <div class="timeline-item">
+                         <div class="timeline-content">
+                             <h3 class="text-xl font-semibold mb-2">Software Development Intern</h3>
+                             <p class="text-indigo-400 mb-2">
+                                 <i class="fas fa-graduation-cap mr-2"></i>StartupTech • 2020 - 2021
+                             </p>
+                             <p class="text-gray-300 mb-3">Worked on frontend development using React and TypeScript. Contributed to the development of a customer management system.</p>
+                             <div class="flex flex-wrap gap-2">
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">TypeScript</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Redux</span>
+                                 <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Git</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <!-- Education -->
+                     <div class="timeline-item">
+                         <div class="timeline-content">
+                             <div class="flex items-center justify-between mb-3">
+                                 <h3 class="text-xl font-semibold">Bachelor of Computer Science</h3>
+                                 <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Graduated</span>
+                             </div>
+                             <p class="text-indigo-400 mb-2">
+                                 <i class="fas fa-university mr-2"></i>University of Technology • 2018 - 2021
+                             </p>
+                             <p class="text-gray-300 mb-3">Graduated with honors (GPA: 3.8/4.0), specialized in software engineering and computer systems. Completed capstone project on distributed systems.</p>
+                             <div class="space-y-2">
+                                 <div class="flex items-center text-sm text-gray-400">
+                                     <i class="fas fa-star mr-2 text-yellow-400"></i>
+                                     <span>Dean's List (3 years)</span>
+                                 </div>
+                                 <div class="flex items-center text-sm text-gray-400">
+                                     <i class="fas fa-trophy mr-2 text-yellow-400"></i>
+                                     <span>Best Capstone Project Award</span>
+                                 </div>
+                                 <div class="flex items-center text-sm text-gray-400">
+                                     <i class="fas fa-users mr-2 text-yellow-400"></i>
+                                     <span>Computer Science Society President</span>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <!-- Certifications -->
+                     <div class="timeline-item">
+                         <div class="timeline-content">
+                             <h3 class="text-xl font-semibold mb-2">Professional Certifications</h3>
+                             <p class="text-indigo-400 mb-2">
+                                 <i class="fas fa-certificate mr-2"></i>Various Institutions • 2020 - 2023
+                             </p>
+                             <div class="space-y-3">
+                                 <div class="flex items-center justify-between">
+                                     <span class="text-gray-300">AWS Certified Solutions Architect</span>
+                                     <span class="text-green-400 text-sm">2023</span>
+                                 </div>
+                                 <div class="flex items-center justify-between">
+                                     <span class="text-gray-300">Oracle Certified Java Developer</span>
+                                     <span class="text-green-400 text-sm">2022</span>
+                                 </div>
+                                 <div class="flex items-center justify-between">
+                                     <span class="text-gray-300">Kubernetes Administrator (CKA)</span>
+                                     <span class="text-green-400 text-sm">2021</span>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+                         <div class="text-center mb-16">
+                 <h2 class="text-4xl font-bold text-gray-100 mb-4">Certifications</h2>
+                 <div class="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+             </div>
+            
+                         <div class="grid md:grid-cols-3 gap-8">
+                 <div class="certification-card">
+                     <div class="relative overflow-hidden rounded-lg mb-4 h-48">
+                         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80" 
+                              alt="AWS Cloud Architecture" 
+                              class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                              onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDUwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0ZjQ2ZTY7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojN2MzYWVkO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNlYzQ4OTk7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2ZyB4PSIyMjUiIHk9IjEyNSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MyLjY3IDAgNC44NCAyLjE3IDQuODQgNC44NCAwIDIuNjctMi4xNyA0Ljg0LTQuODQgNC44NC0yLjY3IDAtNC44NC0yLjE3LTQuODQtNC44NCAwLTIuNjcgMi4xNy00Ljg0IDQuODQtNC44NHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                         <div class="absolute bottom-4 left-4">
+                             <i class="fas fa-certificate text-3xl text-white"></i>
+                         </div>
+                     </div>
+                     <h3 class="text-xl font-semibold mb-2">AWS Certified Solutions Architect</h3>
+                     <p class="text-gray-300 mb-4">Amazon Web Services</p>
+                     <a href="#" class="text-indigo-400 hover:text-indigo-300 hover:underline">View Certificate</a>
+                 </div>
+                 
+                 <div class="certification-card">
+                     <div class="relative overflow-hidden rounded-lg mb-4 h-48">
+                         <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80" 
+                              alt="Java Development" 
+                              class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                              onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDUwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0ZjQ2ZTY7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojN2MzYWVkO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNlYzQ4OTk7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2ZyB4PSIyMjUiIHk9IjEyNSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MyLjY3IDAgNC44NCAyLjE3IDQuODQgNC44NCAwIDIuNjctMi4xNyA0Ljg0LTQuODQgNC44NC0yLjY3IDAtNC44NC0yLjE3LTQuODQtNC44NCAwLTIuNjcgMi4xNy00Ljg0IDQuODQtNC44NHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                         <div class="absolute bottom-4 left-4">
+                             <i class="fas fa-certificate text-3xl text-white"></i>
+                         </div>
+                     </div>
+                     <h3 class="text-xl font-semibold mb-2">Oracle Certified Java Developer</h3>
+                     <p class="text-gray-300 mb-4">Oracle Corporation</p>
+                     <a href="#" class="text-indigo-400 hover:text-indigo-300 hover:underline">View Certificate</a>
+                 </div>
+                 
+                 <div class="certification-card">
+                     <div class="relative overflow-hidden rounded-lg mb-4 h-48">
+                         <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80" 
+                              alt="Kubernetes Container Orchestration" 
+                              class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                              onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDUwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0ZjQ2ZTY7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojN2MzYWVkO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNlYzQ4OTk7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2ZyB4PSIyMjUiIHk9IjEyNSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MyLjY3IDAgNC44NCAyLjE3IDQuODQgNC44NCAwIDIuNjctMi4xNyA0Ljg0LTQuODQgNC44NC0yLjY3IDAtNC44NC0yLjE3LTQuODQtNC44NCAwLTIuNjcgMi4xNy00Ljg0IDQuODQtNC44NHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                         <div class="absolute bottom-4 left-4">
+                             <i class="fas fa-certificate text-3xl text-white"></i>
+                         </div>
+                     </div>
+                     <h3 class="text-xl font-semibold mb-2">Kubernetes Administrator (CKA)</h3>
+                     <p class="text-gray-300 mb-4">Cloud Native Computing Foundation</p>
+                     <a href="#" class="text-indigo-400 hover:text-indigo-300 hover:underline">View Certificate</a>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+                         <div class="text-center mb-16">
+                 <h2 class="text-4xl font-bold text-gray-100 mb-4">Latest Blog Posts</h2>
+                 <div class="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+             </div>
+            
+                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 <article class="blog-card">
+                     <div class="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden shadow-lg">
+                         <div class="relative h-48 overflow-hidden">
+                             <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80" 
+                                  alt="Microservices Architecture" 
+                                  class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                                  onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDUwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0ZjQ2ZTY7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojN2MzYWVkO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNlYzQ4OTk7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2ZyB4PSIyMjUiIHk9IjEyNSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MyLjY3IDAgNC44NCAyLjE3IDQuODQgNC44NCAwIDIuNjctMi4xNyA0Ljg0LTQuODQgNC44NC0yLjY3IDAtNC44NC0yLjE3LTQuODQtNC44NCAwLTIuNjcgMi4xNy00Ljg0IDQuODQtNC44NHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                             <div class="absolute top-4 left-4">
+                                 <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">Architecture</span>
+                             </div>
+                         </div>
+                         <div class="p-6">
+                             <h3 class="text-xl font-semibold mb-2">Microservices Architecture Best Practices</h3>
+                             <p class="text-gray-300 mb-4">Designing scalable microservices with proper service boundaries and communication patterns...</p>
+                             <a href="#" class="text-indigo-400 hover:text-indigo-300 hover:underline">Read More →</a>
+                         </div>
+                     </div>
+                 </article>
+                 
+                 <article class="blog-card">
+                     <div class="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden shadow-lg">
+                         <div class="relative h-48 overflow-hidden">
+                             <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80" 
+                                  alt="DevOps Pipeline" 
+                                  class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                                  onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDUwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0ZjQ2ZTY7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojN2MzYWVkO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNlYzQ4OTk7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2ZyB4PSIyMjUiIHk9IjEyNSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MyLjY3IDAgNC44NCAyLjE3IDQuODQgNC44NCAwIDIuNjctMi4xNyA0Ljg0LTQuODQgNC44NC0yLjY3IDAtNC44NC0yLjE3LTQuODQtNC44NCAwLTIuNjcgMi4xNy00Ljg0IDQuODQtNC44NHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                             <div class="absolute top-4 left-4">
+                                 <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">DevOps</span>
+                             </div>
+                         </div>
+                         <div class="p-6">
+                             <h3 class="text-xl font-semibold mb-2">DevOps Pipeline Automation</h3>
+                             <p class="text-gray-300 mb-4">Building robust CI/CD pipelines with Jenkins, Docker, and Kubernetes for seamless deployments...</p>
+                             <a href="#" class="text-indigo-400 hover:text-indigo-300 hover:underline">Read More →</a>
+                         </div>
+                     </div>
+                 </article>
+                 
+                 <article class="blog-card">
+                     <div class="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden shadow-lg">
+                         <div class="relative h-48 overflow-hidden">
+                             <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80" 
+                                  alt="System Design Patterns" 
+                                  class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                                  onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDUwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0ZjQ2ZTY7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNTAlIiBzdHlsZT0ic3RvcC1jb2xvcjojN2MzYWVkO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNlYzQ4OTk7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHN2ZyB4PSIyMjUiIHk9IjEyNSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MyLjY3IDAgNC44NCAyLjE3IDQuODQgNC44NCAwIDIuNjctMi4xNyA0Ljg0LTQuODQgNC44NC0yLjY3IDAtNC44NC0yLjE3LTQuODQtNC44NCAwLTIuNjcgMi4xNy00Ljg0IDQuODQtNC44NHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                             <div class="absolute top-4 left-4">
+                                 <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">Design</span>
+                             </div>
+                         </div>
+                         <div class="p-6">
+                             <h3 class="text-xl font-semibold mb-2">System Design Patterns</h3>
+                             <p class="text-gray-300 mb-4">Essential design patterns for building scalable, maintainable software systems...</p>
+                             <a href="#" class="text-indigo-400 hover:text-indigo-300 hover:underline">Read More →</a>
+                         </div>
+                     </div>
+                 </article>
+             </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+                         <div class="text-center mb-16">
+                 <h2 class="text-4xl font-bold text-gray-100 mb-4">What Clients Say</h2>
+                 <div class="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+             </div>
+            
+                         <div class="max-w-6xl mx-auto">
+                 <div class="testimonials-carousel relative">
+                     <div class="testimonial-slide active">
+                         <div class="flex items-center space-x-8">
+                             <div class="flex-shrink-0">
+                                 <div class="relative">
+                                     <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80" 
+                                          alt="David Chen - CTO" 
+                                          class="w-24 h-24 rounded-full object-cover border-4 border-indigo-500 shadow-lg"
+                                          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDgiIGN5PSI0OCIgcj0iNDgiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzRmNDZlNjtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM3YzNhZWQ7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2VjNDg5OTtzdG9wLW9wYWNpdHk6MSIgLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8c3ZnIHg9IjM2IiB5PSIzNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MyLjY3IDAgNC44NCAyLjE3IDQuODQgNC44NCAwIDIuNjctMi4xNyA0Ljg0LTQuODQgNC44NC0yLjY3IDAtNC44NC0yLjE3LTQuODQtNC44NCAwLTIuNjcgMi4xNy00Ljg0IDQuODQtNC44NHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                                     <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center">
+                                         <i class="fas fa-quote-left text-white text-sm"></i>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="flex-1">
+                                 <div class="text-4xl text-indigo-400 mb-4">"</div>
+                                 <p class="text-xl text-gray-300 mb-6 italic leading-relaxed">
+                                      "tecoritham's expertise in microservices architecture and system design helped us scale 
+                                      our platform to handle millions of users. His code quality and documentation are exceptional."
+                                  </p>
+                                 <div class="flex items-center">
+                                     <div>
+                                         <h4 class="font-semibold text-lg text-gray-100">David Chen</h4>
+                                         <p class="text-indigo-400">CTO, TechCorp Solutions</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="testimonial-slide">
+                         <div class="flex items-center space-x-8">
+                             <div class="flex-shrink-0">
+                                 <div class="relative">
+                                     <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80" 
+                                          alt="Lisa Rodriguez - DevOps Lead" 
+                                          class="w-24 h-24 rounded-full object-cover border-4 border-green-500 shadow-lg"
+                                          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDgiIGN5PSI0OCIgcj0iNDgiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzEwYjk4MTtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwNTk2Njk7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzA2YjY4NDtzdG9wLW9wYWNpdHk6MSIgLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8c3ZnIHg9IjM2IiB5PSIzNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MyLjY3IDAgNC44NCAyLjE3IDQuODQgNC44NCAwIDIuNjctMi4xNyA0Ljg0LTQuODQgNC44NC0yLjY3IDAtNC44NC0yLjE3LTQuODQtNC44NCAwLTIuNjcgMi4xNy00Ljg0IDQuODQtNC44NHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                                     <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                         <i class="fas fa-quote-left text-white text-sm"></i>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="flex-1">
+                                 <div class="text-4xl text-green-400 mb-4">"</div>
+                                 <p class="text-xl text-gray-300 mb-6 italic leading-relaxed">
+                                      "The DevOps pipeline tecoritham implemented reduced our deployment time by 80% and 
+                                      eliminated production issues. His automation skills are outstanding."
+                                  </p>
+                                 <div class="flex items-center">
+                                     <div>
+                                         <h4 class="font-semibold text-lg text-gray-100">Lisa Rodriguez</h4>
+                                         <p class="text-green-400">DevOps Lead, Digital Innovations</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="testimonial-slide">
+                         <div class="flex items-center space-x-8">
+                             <div class="flex-shrink-0">
+                                 <div class="relative">
+                                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80" 
+                                          alt="Michael Thompson - Senior Developer" 
+                                          class="w-24 h-24 rounded-full object-cover border-4 border-purple-500 shadow-lg"
+                                          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDgiIGN5PSI0OCIgcj0iNDgiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzkzM2VlYTtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM3YzNhZWQ7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzVjM2FhYztzdG9wLW9wYWNpdHk6MSIgLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8c3ZnIHg9IjM2IiB5PSIzNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgM2MyLjY3IDAgNC44NCAyLjE3IDQuODQgNC44NCAwIDIuNjctMi4xNyA0Ljg0LTQuODQgNC44NC0yLjY3IDAtNC44NC0yLjE3LTQuODQtNC44NCAwLTIuNjcgMi4xNy00Ljg0IDQuODQtNC44NHoiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                                     <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                                         <i class="fas fa-quote-left text-white text-sm"></i>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="flex-1">
+                                 <div class="text-4xl text-purple-400 mb-4">"</div>
+                                 <p class="text-xl text-gray-300 mb-6 italic leading-relaxed">
+                                      "tecoritham deep understanding of software architecture and clean code principles 
+                                      made our codebase maintainable and scalable. A true professional."
+                                  </p>
+                                 <div class="flex items-center">
+                                     <div>
+                                         <h4 class="font-semibold text-lg text-gray-100">Michael Thompson</h4>
+                                         <p class="text-purple-400">Senior Developer, Enterprise Systems</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class="flex justify-center mt-12 space-x-4">
+                     <button class="testimonial-nav prev bg-gray-800 border border-gray-700 text-gray-300 hover:text-indigo-400 hover:border-indigo-500 transition-all duration-300 transform hover:scale-110" onclick="changeTestimonial(-1)">
+                         <i class="fas fa-chevron-left"></i>
+                     </button>
+                     <div class="flex space-x-2">
+                         <button class="testimonial-dot w-3 h-3 rounded-full bg-indigo-500 transition-all duration-300" onclick="goToTestimonial(0)"></button>
+                         <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-600 transition-all duration-300" onclick="goToTestimonial(1)"></button>
+                         <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-600 transition-all duration-300" onclick="goToTestimonial(2)"></button>
+                     </div>
+                     <button class="testimonial-nav next bg-gray-800 border border-gray-700 text-gray-300 hover:text-indigo-400 hover:border-indigo-500 transition-all duration-300 transform hover:scale-110" onclick="changeTestimonial(1)">
+                         <i class="fas fa-chevron-right"></i>
+                     </button>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+                         <div class="text-center mb-16">
+                 <h2 class="text-4xl font-bold text-gray-100 mb-4">Get In Touch</h2>
+                 <div class="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+             </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Let's Work Together</h3>
+                                                 <p class="text-gray-300 mb-8">
+                             I'm always interested in new opportunities and exciting projects. 
+                             Whether you have a question or just want to say hi, feel free to reach out!
+                         </p>
+                        
+                        <div class="space-y-4">
+                                                         <div class="flex items-center">
+                                 <i class="fas fa-envelope text-indigo-400 mr-4"></i>
+                                 <a href="mailto:john.doe@example.com" class="text-gray-300 hover:text-indigo-400">
+                                     tecoritham@example.com
+                                 </a>
+                             </div>
+                             <div class="flex items-center">
+                                 <i class="fas fa-phone text-indigo-400 mr-4"></i>
+                                 <a href="tel:+1234567890" class="text-gray-300 hover:text-indigo-400">
+                                     +1 (555) 123-4567
+                                 </a>
+                             </div>
+                             <div class="flex items-center">
+                                 <i class="fas fa-map-marker-alt text-indigo-400 mr-4"></i>
+                                 <span class="text-gray-300">MIT ADT University, Pune</span>
+                             </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <a href="resume.pdf" class="btn-primary" download>
+                                <i class="fas fa-download mr-2"></i>
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3 class="text-2xl font-semibold mb-6">Follow Me</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-dribbble"></i>
+                                <span>Dribbble</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                                 <div>
+                     <h3 class="text-2xl font-bold text-blue-400 mb-4">tecoritham</h3>
+                     <p class="text-gray-400">
+                         Software Developer & Full Stack Engineer specializing in scalable applications and system architecture.
+                     </p>
+                 </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white">Projects</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                    </ul>
+                </div>
+                
+                                 <div>
+                     <h4 class="text-lg font-semibold mb-4">Services</h4>
+                     <ul class="space-y-2">
+                         <li><a href="#services" class="text-gray-400 hover:text-white">Software Development</a></li>
+                         <li><a href="#services" class="text-gray-400 hover:text-white">System Architecture</a></li>
+                         <li><a href="#services" class="text-gray-400 hover:text-white">DevOps & Automation</a></li>
+                         <li><a href="#services" class="text-gray-400 hover:text-white">Technical Consulting</a></li>
+                     </ul>
+                 </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                                 <p class="text-gray-400">
+                     © 2025 tecoritham. All rights reserved. | Built with ❤️ using modern web technologies
+                 </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
